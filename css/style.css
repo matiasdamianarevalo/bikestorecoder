@@ -1,0 +1,144 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+body{
+    background-color: #001219;
+    width: 100%;
+    color:#F6E0B4;
+}
+p{
+    color:#0a9396;
+}
+a{
+    border-radius: 3px;
+    color: #0a9396;
+    text-decoration: none;
+}
+h2{
+    color: #94d2bd;
+}
+h3{ 
+    color: #94d2bd;
+    font-size: 25px;
+}
+#main{
+    list-style: none;
+    color:#0a9396;
+}
+#img{
+    width: 100%;
+}
+/*clases*/
+.grid-container{
+    display: grid;
+    text-align: center;
+}
+#hovercard:hover{
+    transform: scale(1.05);
+    transition: 0.7s;
+}
+.header{
+    z-index: 0;
+    border-radius: 3px;
+    grid-area: header; 
+}
+.main{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 3px;
+    color: #0a9396;
+    grid-area: main;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    grid-area: footer;
+}
+.footer h3{
+    margin: 15px;
+    text-align: center;
+}
+.img{
+    opacity: 1.5;
+    width: 100%;
+    text-align: center;
+}
+.imgmain{
+    margin: 15px 15px;
+    width: 70%;
+    text-align: center;
+}
+.section{
+    margin: 20px 20px;
+}
+/*----media grid-----*/
+@media (min-width: 280px) {
+    .grid-container{
+        grid-template:
+        "header" auto
+        "main"   auto
+        "footer" 80px /
+         auto;
+    }
+    h2{
+        font-size: 16px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    p{
+        font-size: 14px;
+    }
+}
+/*-------768-------*/
+@media (min-width: 768px) {
+    .grid-container{
+        grid-template:
+        "header" auto
+        "main"   auto
+        "footer" 80px /
+         auto;
+    }
+    h2{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    p{
+        font-size: 16px;
+    }
+}
+/*--------1024------*/
+@media (min-width: 1024px) {
+    .grid-container{
+        grid-template:
+        "header  header"   auto
+        "main     main"    auto
+        "footer  footer"  80px /
+         300px    auto;
+    }
+    .imgmain{
+        margin: 15px 15px;
+        width: 100%;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    p{
+        font-size: 18px;
+    }
+    #img{
+        width: 70%;
+    }
+}
